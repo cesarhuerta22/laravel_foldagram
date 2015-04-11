@@ -26,8 +26,8 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-	'local' => array('your-machine-name'),
-
+/*	'local' => array('your-machine-name'),*/
+	return getenv('APP_ENV') ?: 'local';
 ));
 
 /*
